@@ -1,0 +1,49 @@
+Rails API backend - Javascript frontend 
+- He goes by Lo: 
+
+    BACKEND DB  MODELS
+User- 
+- "has many" Lo's 
+- has many trees through Lo's 
+- can sign in and keep track of its Lo's progress aka how many trees 
+What a User will need- 
+- Name 
+- Password 
+
+Lo- 
+- Belongs to a user aka owner 
+- png file (image) 
+- Has many trees
+
+
+
+    Frontend 
+Lo- 
+- Be fed (0-100 fp)
+- Be cuddled 
+- Be tickled 
+- Be made happy (0-100 hp): 
+    - Planting a tree 
+    - Meditating
+    - Making a protest poster (random selection out of three options) 
+
+
+Trees- 
+- Owner has 5 hours to make it's Lo happy before 50 hp are taken
+    - if a Lo reaches 10/100 hp a tree is cut
+    - if a Lo reaches 0/100 hp 3 trees are cut 
+    - every hour a Lo's hp is decreased by 10.. he is lonely af 
+- If an owner goes 6 hours without feeding its Lo (essentially "gardening") 
+    - a few trees are cut down (random out of 5) with an :( message => "Without your help, Lo's garden ran low on supplies (he IS feeding a forest) and he had to eat store bought meat.. # tress are cutdown for cattle production.. the number one contributor for climate change"
+    - after 12 hours; 50 trees :(  
+
+Overall app: 
+- User will create an account or sign in 
+- User will have a Lo
+- Lo is an interactive animation aka you can feed him, make him happy ect 
+- A user will keep track of how many trees its Lo has planted 
+- top 3 owners with the most tree's will be displayed
+- Little climate change facts and overall emphasis 
+- He goes by Lo now, and he speaks for the trees! 
+
+
