@@ -8,4 +8,4 @@
 
 me = User.create(name: "Alethia", password: "Leeth")
 
-myLo = Lo.create(picture: "../public/newa.png", user: me, trees: 0)
+myLo = Lo.create(picture: "../he-goes-by-Lo-api/public/newa.png", user: me, trees: 0)

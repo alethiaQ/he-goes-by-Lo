@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function releaseTheLo(json) {
     let loContainer = document.getElementById("Los house")
 
-    let loPic = json.picture
+    let loPic = json[0].picture
     let pictag = document.createElement("img")
     pictag.src = loPic
+    pictag.classList = "lo-img"
 
     loContainer.appendChild(pictag)
+
+    baseStatBar(json)
 }

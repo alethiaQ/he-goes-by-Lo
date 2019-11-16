@@ -1,0 +1,48 @@
+header {
+    padding: 10px;
+}
+
+#header-img {
+    /* border-style: double dotted;
+    border-color: orange green ; */
+    margin-left: 50%;
+    max-width: 300px;
+    height: auto;
+    transform: translateX(-50%);
+}
+
+.lo-img {
+    max-width: 100%;
+   
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#status-container {
+    margin: 25px 50px 75px 100px;
+}
+.stat-meters {
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    width: 25%;
+    height: 20px;
+    background-color: lightgray;
+}
+.base-bar {
+    height: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+.red-health {
+    background-color: red;
+}
+.green-health {
+    background-color: green;
+}
+
+.yellow-health {
+    background-color: yellow;
+}
