@@ -1,0 +1,178 @@
+
+* {
+    box-sizing: border-box;
+  }
+.header {
+    grid-area: header;
+    justify-items: center;
+    position: absolute;
+}
+.header > #header-img {
+    position: relative;
+   max-width: 20%;
+   height: auto;
+  
+   
+}
+.info-box {
+    border-style: solid;
+    grid-area: info;     
+}
+.status-container{
+    border-style: solid;
+    grid-area: status;
+    justify-items: center;
+    padding: 25px;
+    background-color: lemonchiffon;
+}
+.right-container {
+    border-style: solid;
+    border-color: yellow;
+    grid-area: right;    
+}
+.left-container {
+    border-style: solid;
+    border-color: yellow;
+    grid-area: left;
+    /* position: relative; */
+    justify-self: center;
+    
+}
+body {
+    margin: 2px;
+    overflow: hidden;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: 300px 300px 50px 200px 200px 300px;
+    grid-template-rows:  75px 200px 250px 200px; 
+    grid-template-areas: 
+    "header header header header header header"
+            ". . . right right info"
+    "left left . right right info"
+    "left left . . . status";
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+
+.game-button {
+    border-style: dashed;
+}
+#grid1 {
+    border-style: dashed;
+    grid-area: grida;
+}
+#grid2 {
+    border-style: dashed;
+    grid-area: gridb;
+}
+#grid3 {
+    border-style: dashed;
+    grid-area: gridc;
+}
+#grid4 {
+    border-style: dashed;
+    grid-area: gridd;
+}
+#grid5 {
+    border-style: dashed;
+    grid-area: gride;
+}
+#grid6 {
+    border-style: dashed;
+    grid-area: gridf;
+}
+#grid7 {
+    border-style: dashed;
+    grid-area: gridg;
+}
+#grid8 {
+    border-style: dashed;
+    grid-area: gridh;
+}
+#grid9 {
+    border-style: dashed;
+    grid-area: gridi;
+}
+#grid10 {
+    border-style: dashed;
+    grid-area: gridj;
+}
+#grid11 {
+    border-style: dashed;
+    grid-area: gridk;
+}
+#grid12 {
+    border-style: dashed;
+    grid-area: gridl;
+}
+#grid13 {
+    border-style: dashed;
+    grid-area: gridm;
+}
+#grid14 {
+    border-style: dashed;
+    grid-area: gridn;
+}
+#grid15 {
+    border-style: dashed;
+    grid-area: grido;
+}
+#grid16 {
+    border-style: dashed;
+    grid-area: gridp;
+}
+#game-controls {
+    border-style: solid;
+    grid-area: gc;
+    justify-items: center;
+    margin: 10px;
+}
+#game-grid {
+    
+    margin: 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: 90px 90px 90px 90px 95px;
+    
+    grid-template-areas: 
+                        "grida gridb gridc gridd"
+                        "gride gridf gridg gridh"
+                        "gridi gridj gridk gridl"
+                        "gridm gridn grido gridp"
+                        "gc gc gc gc";
+
+}
+
+.base-bar { 
+    text-align: center;   
+}
+.red-health {
+    background-color: red;
+}
+.green-health {
+    background-color: green;
+}
+
+.yellow-health {
+    background-color: yellow;
+}
+/* .stat-meters {
+   
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    width: 50%;
+    height: 20px;
+    background-color: lightgray;
+} */
+#Lo-Container {
+   
+}
+#lo-img {  
+    max-width: 100%;  
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}

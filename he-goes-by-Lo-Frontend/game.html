@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>He Goes by Lo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="rough.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="rough.css"> -->    
+  </head>
+  <body>
+  
+   <div class="header">
+    <img src="../he-goes-by-Lo-api/public/newest-no-img.png" id="header-img">
+   </div>
+   
+   <div class="right-container">
+
+   </div>
+
+   <div class="left-container">
+      <div id="game-grid">
+          <button class="Gamebutton" id="grid1">1</button>
+           <button class="Gamebutton" id="grid2">2</button>
+           <button class="Gamebutton" id="grid3">3</button>
+           <button class="Gamebutton" id="grid4">4</button>
+           <button class="Gamebutton" id="grid5">5</button>
+           <button class="Gamebutton" id="grid6">6</button>
+           <button class="Gamebutton" id="grid7">7</button>
+           <button class="Gamebutton" id="grid8">8</button>
+           <button class="Gamebutton" id="grid9">9</button>
+           <button class="Gamebutton" id="grid10">10</button>
+           <button class="Gamebutton" id="grid11">11</button>
+           <button class="Gamebutton" id="grid12">12</button>
+           <button class="Gamebutton" id="grid13">13</button>
+           <button class="Gamebutton" id="grid14">14</button>
+           <button class="Gamebutton" id="grid15">15</button>
+           <button class="Gamebutton" id="grid16"></button>
+           
+           <div id="game-controls"> 
+            <button class="ui large green right labeled icon button" id="playBtn">
+              <i class="play circle outline icon"></i>
+                Play
+            </button>
+            <button class="ui large disabled labeled icon button" id="timerBtn">
+                <i class="hourglass half icon"></i>
+                2:00
+            </button>
+            <div class="ui mini horizontal statistic">
+                <div class="value">
+                  0
+                </div>
+                <div class="label">
+                  Points
+                </div>
+              </div>  
+          </div>
+       </div>
+   </div>
+
+
+   <div class="info-box">
+      <div id="Lo-Container">
+          <img src="../he-goes-by-Lo-api/public/newa.png" id="lo-img">
+      </div>
+   </div>
+   <div class="status-container">
+      <!-- Status Meters will live here -->
+       Health:
+       <div id="healthMeter" class="ui indicating progress">
+       <!-- health bar will go here -->
+       </div>
+       Happiness
+       <div id="gratMeter" class="stat-meters">
+           <!-- gratitude bar will go here -->
+       </div>
+       
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+   <script src="lib/easytimer/dist/easytimer.min.js"></script>
+   <script>
+       var timerInstance = new easytimer.Timer();
+   </script>
+   <script src="./src/lo.js"></script>
+   <script src="./src/index.js"></script>
+   
+
+
+  </body>
+</html>
+ 

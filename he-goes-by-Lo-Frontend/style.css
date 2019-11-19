@@ -1,25 +1,36 @@
-header {
-    padding: 10px;
+body {
+    margin: 40px;
 }
 
-#header-img {
+.header {
+    grid-area: header;
+    border-style: solid;
+}
+
+#header-img { 
     /* border-style: double dotted;
     border-color: orange green ; */
-    margin-left: 50%;
-    max-width: 300px;
+    margin-left: 50%; 
+    max-width: 300px; 
     height: auto;
+    transform: translateX(-50%);
+}
+.info-box {
+    border-style: solid;
+    grid-area: info;
+}
+#Lo-Container {     
+}
+#lo-img {  
+    max-width: 100%;  
+    height: auto;
+    margin-left: 50%;
     transform: translateX(-50%);
 }
 
-.lo-img {
-    max-width: 100%;
-   
+.pic-button {
+    max-width: 30%;
     height: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-#status-container {
-    margin: 25px 50px 75px 100px;
 }
 .stat-meters {
     border-style: solid;
@@ -34,8 +45,6 @@ header {
     text-align: center;
     color: white;
 }
-
-
 .red-health {
     background-color: red;
 }
@@ -45,4 +54,92 @@ header {
 
 .yellow-health {
     background-color: yellow;
+}
+.right-container {
+    border-style: solid;
+    border-color: yellow;
+    grid-area: right;
+    /* text-align: center; */
+    
+}
+.left-container {
+    border-style: solid;
+    border-color: yellow;
+    grid-area: left;
+    /* text-align: center; */
+    
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 50px 100px 100px 300px;
+    grid-template-rows:  70px 350px auto 350px; 
+    grid-template-areas: 
+    ". header header . . ."
+    ". . . right right ."
+    "left left . right right info"
+    "left left . . . info";
+}
+
+.game-button {
+    border-style: dashed;
+}
+#grid1 {
+    grid-area: grida;
+}
+#grid2 {
+    grid-area: gridb;
+}
+#grid3 {
+    grid-area: gridc;
+}
+#grid4 {
+    grid-area: gridd;
+}
+#grid5 {
+    grid-area: gride;
+}
+#grid6 {
+    grid-area: gridf;
+}
+#grid7 {
+    grid-area: gridg;
+}
+#grid8 {
+    grid-area: gridh;
+}
+#grid9 {
+    grid-area: gridi;
+}
+#grid10 {
+    grid-area: gridj;
+}
+#grid11 {
+    grid-area: gridk;
+}
+#grid12 {
+    grid-area: gridl;
+}
+#grid13 {
+    grid-area: gridm;
+}
+#grid14 {
+    grid-area: gridn;
+}
+#grid15 {
+    grid-area: grido;
+}
+#grid16 {
+    grid-area: gridp;
+}/* will be added to main css sheet after testing is done */
+#game-grid {
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
+    justify-items: center;
+    grid-template-areas: "grida gridb gridc gridd"
+                        "gride gridf gridg gridh"
+                        "gridi gridj gridk gridl"
+                        "gridm gridn grido gridp";
+
 }
