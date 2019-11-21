@@ -1,145 +1,50 @@
-body {
-    margin: 40px;
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
+canvas {
+    width: 80vmin;
+    border: 10px solid #F9E79F;
+  }
 
+.game-container {
+    grid-area: game;
+    
+
+}
 .header {
-    grid-area: header;
-    border-style: solid;
+  grid-area: header;
 }
-
-#header-img { 
-    /* border-style: double dotted;
-    border-color: orange green ; */
-    margin-left: 50%; 
-    max-width: 300px; 
-    height: auto;
-    transform: translateX(-50%);
+.user-section {
+  grid-area: user;
+  
 }
-.info-box {
-    border-style: solid;
-    grid-area: info;
+#login-container {
+  display: none;
+  background: #F9E79F;
+  opacity: .8;
 }
-#Lo-Container {     
+#user-login {
+  width: 80%;
 }
-#lo-img {  
-    max-width: 100%;  
-    height: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
+.Lo-container {
+  grid-area: Lo;
 }
-
-.pic-button {
-    max-width: 30%;
-    height: auto;
+.submit:hover {
+  background-color: rgb(227, 235, 154);
+  border: #e04b52 solid 1px;
+  color: #e04b52;
 }
-.stat-meters {
-    border-style: solid;
-    border-color: black;
-    padding: 10px;
-    width: 25%;
-    height: 20px;
-    background-color: lightgray;
-}
-.base-bar {
-    height: 20px;
-    text-align: center;
-    color: white;
-}
-.red-health {
-    background-color: red;
-}
-.green-health {
-    background-color: green;
-}
-
-.yellow-health {
-    background-color: yellow;
-}
-.right-container {
-    border-style: solid;
-    border-color: yellow;
-    grid-area: right;
-    /* text-align: center; */
-    
-}
-.left-container {
-    border-style: solid;
-    border-color: yellow;
-    grid-area: left;
-    /* text-align: center; */
-    
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 100px 100px 50px 100px 100px 300px;
-    grid-template-rows:  70px 350px auto 350px; 
-    grid-template-areas: 
-    ". header header . . ."
-    ". . . right right ."
-    "left left . right right info"
-    "left left . . . info";
-}
-
-.game-button {
-    border-style: dashed;
-}
-#grid1 {
-    grid-area: grida;
-}
-#grid2 {
-    grid-area: gridb;
-}
-#grid3 {
-    grid-area: gridc;
-}
-#grid4 {
-    grid-area: gridd;
-}
-#grid5 {
-    grid-area: gride;
-}
-#grid6 {
-    grid-area: gridf;
-}
-#grid7 {
-    grid-area: gridg;
-}
-#grid8 {
-    grid-area: gridh;
-}
-#grid9 {
-    grid-area: gridi;
-}
-#grid10 {
-    grid-area: gridj;
-}
-#grid11 {
-    grid-area: gridk;
-}
-#grid12 {
-    grid-area: gridl;
-}
-#grid13 {
-    grid-area: gridm;
-}
-#grid14 {
-    grid-area: gridn;
-}
-#grid15 {
-    grid-area: grido;
-}
-#grid16 {
-    grid-area: gridp;
-}/* will be added to main css sheet after testing is done */
-#game-grid {
-    display: grid;
-    grid-template-columns: 80px 80px 80px 80px;
-    grid-template-rows: 80px 80px 80px 80px;
-    justify-items: center;
-    grid-template-areas: "grida gridb gridc gridd"
-                        "gride gridf gridg gridh"
-                        "gridi gridj gridk gridl"
-                        "gridm gridn grido gridp";
-
-}
+body {
+    /* border-style: solid; */
+      display: grid;
+      grid-template-columns: auto 310px auto;
+      grid-template-rows: auto 350px auto;
+      grid-template-areas: "header header header"
+                            "user game Lo"
+                            "user game Lo";
+                            
+      grid-gap: 15px;
+      /* justify-content: space-evenly; */
+  }
+  

@@ -1,9 +1,11 @@
 
+
 let user_id = "";
+// when called via class method (next) will be User.setUp() from index.js
 function setUp() {
     
     let addUser = false;
-    // let gameReady = false;
+    
     const LoginBtn = document.getElementById('new-user-btn');
 
     const userFormContainter = document.getElementById('login-container');
