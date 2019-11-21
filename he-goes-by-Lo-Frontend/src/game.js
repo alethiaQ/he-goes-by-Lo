@@ -1,5 +1,6 @@
-function renderGame() {
+function renderGame(userInfo) {
     // Selecting Element Reference
+  let thisUser = userInfo
 
 const button = document.getElementById("play");
 const score = document.getElementById("score");
@@ -177,7 +178,7 @@ function checkGameOver() {
     (part, i) => i !== 0 && head.x === part.x && head.y === part.y
  ) == true) {
     let finalScore = state.score
-   updateUserTrees(finalScore);
+   updateUserTrees(finalScore, thisUser);
    return true;
  } else {
    return false;
