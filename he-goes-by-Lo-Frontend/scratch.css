@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+canvas {
+    width: 80vmin;
+    border: 10px solid cornflowerblue;
+  }
+
+.game-container {
+    grid-area: game;
+    
+
+}
+.header {
+  grid-area: header;
+}
+.user-section {
+  grid-area: user;
+  
+}
+#login-container {
+  display: none;
+  background: #515DA2;
+  opacity: .8;
+}
+#user-login {
+  width: 80%;
+}
+.Lo-container {
+  grid-area: Lo;
+}
+.submit:hover {
+  background-color: whitesmoke;
+  border: #e04b52 solid 1px;
+  color: #e04b52;
+}
+body {
+    /* border-style: solid; */
+      display: grid;
+      grid-template-columns: auto 310px auto;
+      grid-template-rows: auto 350px auto;
+      grid-template-areas: "header header header"
+                            "user game Lo"
+                            "user game Lo";
+                            
+      grid-gap: 15px;
+      /* justify-content: space-evenly; */
+  }
+  

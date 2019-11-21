@@ -10,23 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_13_233408) do
-
-  create_table "los", force: :cascade do |t|
-    t.string "picture"
-    t.integer "user_id", null: false
-    t.integer "trees"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_los_on_user_id"
-  end
+ActiveRecord::Schema.define(version: 2019_11_20_225813) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "password_digest"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "trees"
   end
 
-  add_foreign_key "los", "users"
 end

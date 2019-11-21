@@ -1,34 +1,24 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:3000/los")
-        .then(resp => resp.json())
-        .then(json => {
-            releaseTheLo(json)
-        })
-    }
-)
 
-function releaseTheLo(json) {
+    setUp();
 
-    baseStatBar(json)
-    gameStatBar();
+
+    
+});
+function updateUserTrees(score) {
+    let treeCntr = document.getElementById("tree-count")
+    let prevScore = treeCntr.innerText
+    let newScore = score + parseInt(prevScore, 10);
+    treeCntr.innerText = `${newScore}`
+    //   treeCntr.innerText = `${newScore}`
+     patchUser(newScore);
+
 }
 
-function gameStatBar() {
-    let playBtn = document.getElementById("playBtn")
-    let timerBtn = document.getElementById("timerBtn")
-    playBtn.addEventListener("click", (e) => {
-        e.preventDefault
-        let timer = new Timer();
-        timer.start({ countdown: true, startValues: { seconds: 120 } });
-        timerBtn.innerText = timer.getTimeValues().toString();
-        timer.addEventListener('secondsUpdated', function (e) {
-            timerBtn.innerText = (timer.getTimeValues().toString());
-        });
-        timer.addEventListener('targetAchieved', function (e) {
-            timerBtn.innerText = "Time's up!";
-        });
 
-    });
-}
-
+//     //   let prevScore;
+//     //   let uname;
+//     //   
+//     // }
+    

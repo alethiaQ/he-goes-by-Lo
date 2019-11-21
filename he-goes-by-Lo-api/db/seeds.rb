@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-me = User.create(name: "Alethia", password: "Leeth")
+# me = User.create(name: "Alethia", password: "Leeth")
 
-myLo = Lo.create(picture: "../he-goes-by-Lo-api/public/newa.png", user: me, trees: 0)
+# myLo = Lo.create(picture: "../he-goes-by-Lo-api/public/newa.png", user: me, trees: 0)

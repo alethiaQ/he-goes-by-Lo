@@ -19,22 +19,22 @@ function baseStatBar(data) {
     // let currentGrat = data[0].gp
 
     if (currentHealth >= 0 && currentHealth < 25) {
-        healthMeter.className = "ui large red progress"
+        healthMeter.className = "ui red progress"
     } else if (currentHealth >= 25 && currentHealth < 50) {
-        healthMeter.className = "ui large yellow progress"
+        healthMeter.className = "ui yellow progress"
     } else {
-        healthMeter.className = "ui large green progress"
+        healthMeter.className = "ui green progress"
     }
     healthBar.style.width = currentHealth + "%"
     healthBar.innerText = `${currentHealth}%`
     healthMeter.appendChild(healthBar)
 
     if (currentGrat >= 0 && currentGrat < 25) {
-       gratMeter.className = "ui large red progress"
+       gratMeter.className = "ui red progress"
     } else if (currentGrat >= 25 && currentGrat < 50) {
-        gratMeter.className = "ui large yellow progress"
+        gratMeter.className = "ui yellow progress"
     } else {
-        gratMeter.className = "ui large green progress"
+        gratMeter.className = "ui green progress"
     }
     gratBar.style.width = currentGrat + "%"
     gratBar.innerText = `${currentGrat}%`

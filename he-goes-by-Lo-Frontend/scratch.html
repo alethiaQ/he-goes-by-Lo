@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>He Goes by Lo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="scratch.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="rough.css"> -->    
+  </head>
+  <body>
+  
+   <div class="header">
+
+   </div>
+
+   <div class="user-section" id="user-section">
+
+     <div id="login-container">
+      <form id="user-login" style="">
+        <label> Name: <input type="text" name="name" id="name" /></label><br />
+        <label> Email: <input type="text" name="email" id="email" /></label><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+      </form>
+    </div>
+
+      <p style='text-align:center'> Lo needs help! <button id='new-user-btn'>Sign in to keep track of your points!</button></p>
+   </div>
+
+  
+   <div class="game-container" id="game-container">
+    <canvas width="250"  height="250" id="draw-board"></canvas>
+    <div id="score">Score: 0</div>
+    <button id="play">Play</button>
+   </div>
+
+   <div class="Lo-container">
+
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  
+   <script src="./src/user.js"></script>
+   <script src="./src/game.js"></script>
+   <script src="./src/index.js"></script>
+  </body>
+</html>
+ 
