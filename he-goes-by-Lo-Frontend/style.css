@@ -4,31 +4,54 @@
 }
 canvas {
     width: 80vmin;
-    border: 10px solid #F9E79F;
+    border: 10px solid #ffa64d;
+    
   }
 
 .game-container {
-    grid-area: game;
-    
-
+    grid-area: game;   
 }
 .header {
   grid-area: header;
 }
+/* .header > #header-img {
+  position: relative;
+ max-width: 70%;
+ height: auto;
+ 
+} */
 .user-section {
   grid-area: user;
   
 }
+.new-user-btn {
+
+}
 #login-container {
-  display: none;
-  background: #F9E79F;
-  opacity: .8;
+  /* display: none; */
+  background: #cc99ff;
+  /* opacity: .5; */
 }
 #user-login {
-  width: 80%;
+  width: 50%;
 }
 .Lo-container {
   grid-area: Lo;
+  
+  justify-content: flex-start;
+}
+#lo-img {  
+  margin: 5px;
+  max-width: 50%;  
+  height: auto;
+  position: absolute;
+  bottom: 5px;
+  
+  left: 5px;
+  right: 10px;
+  
+  
+  
 }
 .submit:hover {
   background-color: rgb(227, 235, 154);
@@ -37,14 +60,15 @@ canvas {
 }
 body {
     /* border-style: solid; */
+      background-color: #ccffe6;
       display: grid;
       grid-template-columns: auto 310px auto;
       grid-template-rows: auto 350px auto;
-      grid-template-areas: "header header header"
-                            "user game Lo"
-                            "user game Lo";
+      grid-template-areas: ". header ."
+                            "user game game "
+                            "Lo game game";
                             
-      grid-gap: 15px;
-      /* justify-content: space-evenly; */
+      grid-gap: 10px;
+      justify-content: space-evenly;
   }
   

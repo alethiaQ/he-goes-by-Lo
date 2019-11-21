@@ -1,31 +1,28 @@
 
-
+// declared outside of main function to be used with other functions, but thats why I will be transitioning to class setup 
 let user_id = "";
 // when called via class method (next) will be User.setUp() from index.js
 function setUp() {
-    
-    let addUser = false;
-    
+    // control login form popup
+    let addUser = false;    
     const LoginBtn = document.getElementById('new-user-btn');
-
     const userFormContainter = document.getElementById('login-container');
-    // const gameBtn = document.getElementById('play')
-    // // gameBtn.disabled = true;
-
+// if someone clicks login button, form will drop drown
     LoginBtn.addEventListener('click', () => {
         //hide-seek user login 
         addUser = !addUser
         if (addUser) {
-            userFormContainter.style.display = 'block'
+            userFormContainter.className = "ui active large modal"
+//      login form submit button starts event that will gather user data and allow the game to be played 
             userFormContainter.addEventListener('submit', (e) => {
                 e.preventDefault();
                 createUser(e.target)
     })
-    } else {
-        userFormContainter.style.display = 'none'
+        } else {
+            userFormContainter.className = "ui modal"
     }
 })
-
+// api endpoint create method will get instance by 
     function createUser(user) {
         let username = user.name.value
         let email = user.email.value
@@ -59,7 +56,7 @@ function setUp() {
     }
 
     function appendUser(username, trees) {
-        userFormContainter.style.display = 'none'
+        userFormContainter.className = "ui modal"
     let userSection = document.getElementById("user-section")
     let userInfoContainer = document.createElement('div')
     let name = username;
@@ -71,7 +68,7 @@ function setUp() {
 
 
     let treeContainer = document.createElement('div')
-    treeContainer.className = "ui mini horizontal statistic"
+    treeContainer.className = "ui large green horizontal statistic"
     let valueCnt = document.createElement('div')
         valueCnt.className = "value"
         valueCnt.id = "tree-count"
@@ -87,9 +84,6 @@ function setUp() {
     userSection.appendChild(userInfoContainer)
    
     }
-    
-    
-
 }
 function patchUser(newScore) {
     fetch(`http://localhost:3000/users/` + `${user_id}`, {

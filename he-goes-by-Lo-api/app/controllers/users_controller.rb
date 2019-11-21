@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 
   def index
     topThreeUsers = User.topThreeTrees
-
-    render json: topThreeUsers
+    users = User.all
+    render json: users
   end
 
   def show

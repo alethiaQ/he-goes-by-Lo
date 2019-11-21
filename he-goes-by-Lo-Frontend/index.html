@@ -4,20 +4,19 @@
     <meta charset="utf-8">
     <title>He Goes by Lo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="scratch.css">
+    <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- <link rel="stylesheet" href="rough.css"> -->    
   </head>
   <body>
   
    <div class="header">
-      <img src="../he-goes-by-Lo-api/public/newest-no-img.png" alt="toy-header" id="header-img">
-
+      <!-- <img src="../he-goes-by-Lo-api/public/newest-no-img.png" alt="toy-header" id="header-img"> -->
    </div>
 
    <div class="user-section" id="user-section">
 
-     <div id="login-container">
+     <div id="login-container" class="ui modal">
       <form id="user-login" style="">
         <label> Name: <input type="text" name="name" id="name" /></label><br />
         <label> Email: <input type="text" name="email" id="email" /></label><br />
@@ -26,18 +25,19 @@
     </div>
     <!-- <div class="ui horizontal divider"> -->
 
-      <p style='text-align:center'> Lo needs help! <button id='new-user-btn'>Sign in to keep track of your points!</button></p>
+      <p style='text-align:center'> Lo needs help! Recycle as many items as you can and save the trees!<button id='new-user-btn' class="ui orange compact button">Sign in to play!</button></p>
    </div>
 
   
    <div class="game-container" id="game-container">
     <canvas width="250"  height="250" id="draw-board"></canvas>
     <div id="score">Score: 0</div>
-    <button id="play">Play</button>
+    <button id="play" class="ui orange compact button">Play</button>
    </div>
 
    <div class="Lo-container">
-
+      <img src="../he-goes-by-Lo-api/public/floatin.png" id="lo-img">
+      
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>

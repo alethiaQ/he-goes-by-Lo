@@ -1,7 +1,6 @@
 function renderGame() {
     // Selecting Element Reference
-  // let currentUser = user;
-let currentUser = localStorage.getItem('user_id')
+
 const button = document.getElementById("play");
 const score = document.getElementById("score");
 const canvas = document.getElementById("draw-board");
@@ -33,7 +32,7 @@ var state = {
 // Snake Part
 function drawSnakePart(ctx,x,y,head=false) {
   // Set the fillstyle to green if it is head else white
-  ctx.fillStyle = head ? "#F5B041":"#D2F8CB";
+  ctx.fillStyle = head ? "black":"#ffff4d ";
   // draw a rectangle at (x,y) coordinates with width and height of 10px
   ctx.fillRect(x,y,10,10);
  /* Note: you can use any shape or image in this 
@@ -45,7 +44,7 @@ function drawFood(ctx,x,y) {
   //Starting Path
   ctx.beginPath();
   //setting the fill style to red
-  ctx.fillStyle="#FDFEFE";
+  ctx.fillStyle="#66ff66";
   // Making a circle
   ctx.arc(x+5,y+5,5,0,2*Math.PI);
  // Closing the Path
@@ -57,7 +56,7 @@ function drawFood(ctx,x,y) {
 //Drawing Background
 function drawBackground(){
   //the background color, choose whichever color you like
-  ctx.fillStyle="#F5B7B1";
+  ctx.fillStyle="#e6e6ff";
   // draw a rectangle at (0,0) coordinates with width and height of 250px
   ctx.fillRect(0, 0, 250, 250);
   
@@ -219,8 +218,8 @@ function draw(timestamp) {
     //  Chcking if game is over.
     if (checkGameOver()) {
       //        Exiting function if is over
-        state.gameover = true;      
-      return;
+       state.gameover = true      
+       return;
     }
     //     Calclating next position of snake
     moveSnake();
