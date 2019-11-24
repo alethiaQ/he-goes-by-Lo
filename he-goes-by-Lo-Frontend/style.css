@@ -9,6 +9,7 @@ canvas {
   }
 
 .game-container {
+  background-image:url("../he-goes-by-Lo-api/public/—Pngtree—vector\ seamless\ black\ and\ white_3576624.png");
     grid-area: game;   
 }
 .header {
@@ -60,7 +61,8 @@ canvas {
 }
 body {
     /* border-style: solid; */
-      background-color: #ccffe6;
+      background-image:url('../he-goes-by-Lo-api/public/beanstalk-dark.png');
+      color: whitesmoke;
       display: grid;
       grid-template-columns: auto 310px auto;
       grid-template-rows: auto 350px auto;

@@ -1,11 +1,12 @@
+
 class User {
     // only after the post fetch is made will a new instance of a user be created 
-    constructor(name, email, trees, id) {
-        this.name = name; 
-        this.email = email;
-        this.trees = trees;
+    constructor(userdata) {
+        this.name = userdata.name; 
+        this.email = userdata.email;
+        this.trees = userdata.trees;
         // id is used only to update user db table
-        this.user_id = id;
+        this.user_id = userdata.id;
     }
     // class function called by index to start the user login process which then triggers the game
     static setUp() {
@@ -36,6 +37,8 @@ class User {
             }
         });
     }
+
+
     static postUser(name, email) {
         // sending input to API create method-- 
         // api create endpoint uses find_or_create so new user instance won't be added each time and score will be properly tracked
@@ -53,13 +56,16 @@ class User {
         })
             .then(resp => resp.json())
             .then(userData => {
+                debugger
                 console.log(`user added`)
                 // the endpoint returns to us the new/found user instance.. using that data we create a OOJS user instance
+                let thisGames = userData.games
                 let thisUsername = userData.name 
                 let thisUseremail = userData.email
                 let thisUsertrees = userData.trees
                 let thisUserid = userData.id
-                let newDomUser = new User(thisUsername, thisUseremail, thisUsertrees, thisUserid)
+                let newDomUser = new User(userData)
+                
                 // now that user is set up and scores are properly rendered, we can call on the game fn making "play" accessible
                 renderGame(newDomUser)
                 // append current users data to page
@@ -104,6 +110,7 @@ class User {
             },
             body: JSON.stringify({
                 'trees': newScore
+                
             })
         })
         console.log(`user updated! id: ${this.user_id}`)
